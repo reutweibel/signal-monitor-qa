@@ -89,7 +89,7 @@ Root cause: `frontend/src/pages/CaseDetailPage.tsx:90`, the "Run Enrichment" `<b
 | 2 | 95 | AT&T | mobile |
 | 3 | 99 | Verizon | mobile |
 
-All three are for the *same phone number*. This makes the bug worse than simple duplicate noise: an analyst sees three differently-confident, mutually contradictory "facts" about the same data point, with no indication any of them came from a redundant run rather than genuinely different signal sources, directly undermining the product's "explainable/traceable" premise.
+All three are for the *same phone number*, giving an analyst three contradictory "facts" with no indication any came from a redundant run rather than genuinely different sources.
 
 **Severity:** High. This is trivially reachable through normal, plausible user behavior (a double-click, or repeated re-clicks because the button gives no immediate feedback), no special conditions needed. It silently pollutes case data with duplicate, sometimes contradictory enrichment entries and gives the user zero indication that redundant runs happened or that some results on screen came from a run they never saw progress for. For a tool whose value proposition is trustworthy, explainable signal data, silent duplication with no audit trail is a meaningful data-integrity concern.
 
