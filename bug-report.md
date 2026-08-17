@@ -2,7 +2,7 @@
 
 Target: Signal Monitor (backend `localhost:3000`, frontend `localhost:5173`), seeded data (SEED=42, deterministic across restarts).
 
-*Optional: a styled, severity-grouped version of this same report is viewable live at [reutweibel.github.io/signal-monitor-qa/bug-report.html](https://reutweibel.github.io/signal-monitor-qa/bug-report.html) (source: [`bug-report.html`](bug-report.html)).*
+*Optional: a styled, severity-grouped version of this same report is viewable live at [reutweibel.github.io/signal-monitor-qa/extras/bug-report.html](https://reutweibel.github.io/signal-monitor-qa/extras/bug-report.html).*
 
 ---
 
