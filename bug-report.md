@@ -2,6 +2,8 @@
 
 Target: Signal Monitor (backend `localhost:3000`, frontend `localhost:5173`), seeded data (SEED=42, deterministic across restarts).
 
+*Optional: a styled HTML version of this same report is available at [`bug-report.html`](bug-report.html).*
+
 ---
 
 # High Severity
