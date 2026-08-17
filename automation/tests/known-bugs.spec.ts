@@ -6,7 +6,7 @@ import { API_URL, APP_URL, KNOWN_CASES } from './constants';
  * the CORRECT expected behavior and annotated with test.fail(). While the
  * bug is unfixed, Playwright reports these as "expected failures" (not a
  * red build); the moment a fix lands, the test flips to an unexpected pass
- * and Playwright flags it — the cue to delete the test.fail() line and let
+ * and Playwright flags it, the cue to delete the test.fail() line and let
  * the test stand as a normal regression guard going forward.
  *
  * Ref #7 (cosmetic codename inconsistency) is intentionally not automated:
@@ -73,11 +73,11 @@ test.describe('Known bug regressions (see bug-report.md)', () => {
     // confidenceScore is Math.floor(Math.random() * 101): only 10 of the 101
     // possible values (0-9) are single-digit, so the lexical-sort bug only
     // becomes visible when a single-digit score lands among two-digit ones.
-    // A handful of samples isn't reliable — fire many concurrent enrichment
+    // A handful of samples isn't reliable, so fire many concurrent enrichment
     // runs (this also exercises bug #3, harmlessly, as a way to generate
     // volume quickly) so each item accumulates ~20 samples in one batch
     // instead of running sequentially. This makes a violation highly likely
-    // without a slow test; it does not make it certain — see README.
+    // without a slow test; it does not make it certain, see README.
     const RUNS = 20;
     const jobIds: string[] = [];
     await Promise.all(

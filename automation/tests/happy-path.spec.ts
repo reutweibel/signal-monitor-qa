@@ -22,7 +22,7 @@ test('running enrichment on a populated case adds one new result per item and re
   const caseId = KNOWN_CASES.happyPathCase;
 
   // Snapshot per-item enrichment counts before, rather than assuming they
-  // start at 0 — keeps the test correct even if it's ever re-run against a
+  // start at 0, keeps the test correct even if it's ever re-run against a
   // backend that wasn't freshly restarted.
   const before = await getCase(request, caseId);
   const beforeCounts = enrichmentCountsByItemId(before);
