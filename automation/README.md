@@ -2,10 +2,6 @@
 
 Playwright test suite covering the core flows of Signal Monitor, plus a regression suite that encodes the 7 defects from [`../bug-report.md`](../bug-report.md).
 
-## Why Playwright
-
-Signal Monitor is a React/Vite frontend backed by a NestJS API, and several of the bugs found in Part 1 only show up when UI behavior and API behavior are checked together (e.g. the sort bug is a frontend rendering issue, but generating enough sample data to reproduce it reliably needs direct API calls). Playwright's `request` fixture and `page` fixture share the same test runner and can be freely mixed in one test, which fits this app well. It also has first-class TypeScript support and matches the project's own stack (Node/npm), so no extra language toolchain is needed on top of what's already required to run the app.
-
 ## Setup
 
 ```bash
